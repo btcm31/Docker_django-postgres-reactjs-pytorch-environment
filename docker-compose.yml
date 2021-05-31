@@ -21,15 +21,14 @@ services:
             - db
     frontend:
         build: ./frontend
-        command: ["npm", "start"]
         volumes:
             - ./frontend:/app/frontend
+            - /app/frontend/node_modules
         ports:
             - "3000:3000"
+        command: ["npm", "start"]
     nlp:
         build: ./nlp 
-        ports:
-            - "6000:8888"  
         volumes:
             - ./nlp:/app/nlp
     
