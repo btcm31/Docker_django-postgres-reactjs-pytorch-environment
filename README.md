@@ -1,1 +1,1 @@
-# docker-compose up
+### Environment docker for run django + reactjs + postgresql + pytorch
